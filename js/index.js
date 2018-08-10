@@ -250,7 +250,7 @@ window.onload=function () {
     let span=countdown.querySelectorAll("span")
     function daojishi() {
         let nowTime=new Date();
-        let futureTime=new Date(2018,6,26,21);
+        let futureTime=new Date(2018,7,10,21);
         let time1=nowTime.getTime();
         let time2=futureTime.getTime();
         let arr=[];
@@ -269,6 +269,9 @@ window.onload=function () {
         arr.push(hour);
         times=times-(hour*(60*60));
         let minut=Math.floor(times/60);
+        if(minut<10){
+            minut="0"+minut;
+        }
         arr.push(minut);
         times=times-(minut*(60));
         let s=Math.floor(times%60);
